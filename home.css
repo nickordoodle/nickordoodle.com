@@ -38,19 +38,19 @@
     font-family: Monaco;
 }
 
-#home-content-container {
-    min-width: 100vw;
+#main-content-container {
     display: grid;
+    gap: 30vh 0;
     grid-template-areas:
-        "navbar"
         "splash"
         "aboutme"
+        "projects"
         "blog"
         "contact";
 }
 
 #nav-bar {
-    grid-area: navbar;
+    z-index: 1;
 }
 
 #splash-page {
@@ -63,6 +63,11 @@
 #aboutme {
     background-color: springgreen;
     grid-area: aboutme;
+}
+
+#projects {
+    background-color: darkgoldenrod;
+    grid-area: projects;
 }
 
 #blog {
