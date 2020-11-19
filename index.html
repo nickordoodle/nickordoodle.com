@@ -20,16 +20,16 @@
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="home-content-container">
 
-        <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <section class="my-nav-bars">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 centered">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -50,11 +50,11 @@
 
 
         <!-- Home Section -->
-        <section class="home-section centered-content">
+        <section class="home-section centered-content" id="splash-page">
             <!-- Splash page section -->
             <div>
 
-                <h1 class="display-1">Hello;</h1>
+                <h1 class="display-1 center-horizontal">Hello;</h1>
                 <h2>
                     I am Nick Scherer.<br>
                     I am a Software Development <br>
@@ -98,8 +98,8 @@
         </section>
 
         <!-- Blog Section -->
-        <section class="home-section centered-content" id="blog">
-            <h1 class="display-3">Blog;</h1>
+        <section class="home-section centered-content">
+            <h1 class="display-3 center-horizontal" id="blog">Blog;</h1>
             <div class="container grid-text-layout">
                 <div class="show-border">
                     <h2>Leadership in Turbulent Times</h2>
@@ -192,7 +192,7 @@
 
         <!-- Contact Section -->
         <section class="home-section centered-content">
-            <h1 class="display-4 ">Contact;</h1>
+            <h1 class="display-4 center-horizontal">Contact;</h1>
 
             <div class="container centered" id="contact">
 
