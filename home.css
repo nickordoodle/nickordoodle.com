@@ -66,7 +66,10 @@ hr {
         "contact";
 }
 
-#nav-bar {}
+#nav-bar {
+    background-color: orangered;
+    border-radius: 0.75em;
+}
 
 #splash-page {
     background-image: url('images/korea-skyscrapers.JPG');
@@ -76,22 +79,18 @@ hr {
 }
 
 #aboutme {
-    background-color: springgreen;
     grid-area: aboutme;
 }
 
 #projects {
-    background-color: darkgoldenrod;
     grid-area: projects;
 }
 
 #blog {
-    background-color: salmon;
     grid-area: blog;
 }
 
 #contact {
-    background-color: chocolate;
     grid-area: contact;
 }
 
