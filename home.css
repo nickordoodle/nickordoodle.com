@@ -66,6 +66,10 @@ hr {
         "contact";
 }
 
+.nav-item-pop:hover {
+    transform: scale(1.4);
+}
+
 #nav-bar {
     background-color: orangered;
     border-radius: 0.75em;
