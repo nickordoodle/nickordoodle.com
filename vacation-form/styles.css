@@ -1,0 +1,25 @@
+#main-container {
+    display: flex;
+    justify-content: center;
+    background-color: lightskyblue;
+}
+
+#left-container {
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(52, 186, 70);
+}
+
+#right-container {
+    flex-direction: column;
+    justify-content: center;
+    background-color: rosybrown;
+}
+
+.wishlist-item {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+}
