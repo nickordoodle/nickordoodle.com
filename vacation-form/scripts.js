@@ -1,14 +1,7 @@
-// var nameInput = document.getElementById("destination-name").value;
-// var locationInput = document.getElementById("location").value;
-// var imageURL = document.getElementById("photo-url").src;
-// var descriptionInput = document.getElementById("description").value;
-
 var submitBtn = document.getElementById("submit-button");
 submitBtn.addEventListener("click", addWishListItem);
 
-function addWishListItem() {
-    //validate input
-
+function addWishListItem(event) {
     //extract values
     var nameInput = document.getElementById("destination-name").value;
     var locationInput = document.getElementById("location").value;
@@ -21,7 +14,7 @@ function addWishListItem() {
     newGroup.style.backgroundColor = "black";
     newGroup.innerHTML = "New Item";
 
-    //child elements to new item    
+    //child elements to new item
     let name = document.createElement("p");
     name.innerHTML = nameInput;
     name.style.color = "white";
