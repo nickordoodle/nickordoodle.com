@@ -1,0 +1,25 @@
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: lightskyblue;
+
+}
+
+#keyword-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: lightskyblue;
+
+}
+
+.content-item {
+    width: 32%;
+    padding-bottom: 32%;
+    /* Same as width, sets height */
+    margin-bottom: 2%;
+    /* (100-32*3)/2 */
+    position: relative;
+    background-color: lightcoral;
+}
