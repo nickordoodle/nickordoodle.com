@@ -14,27 +14,23 @@ body {
     background-color: lightskyblue;
 }
 
-.search-item {}
-
 #main-container {
     display: flex;
     flex-flow: row wrap;
     min-width: 80vw;
     justify-content: space-between;
-    background-color: lightskyblue;
+    background-color: rgb(106, 211, 246);
 
 }
 
-
-
 .content-item {
-    box-shadow: 10px 10px 10px 10px grey;
     max-width: 100%;
     max-height: 100%;
     width: 25%;
-    padding-bottom: 32%;
-    /* Same as width, sets height */
-    margin-bottom: 2%;
-    /* (100-32*3)/2 */
-    background-color: lightcoral;
+    padding: 0.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
