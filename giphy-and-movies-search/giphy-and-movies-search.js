@@ -1,13 +1,11 @@
-var keywordContainer = document.getElementById("keyword-container");
-var contentContainer = document.getElementById("main-container");
+// Initialize HTML container references and query list
 var mainContentContainer = document.getElementById("main-container");
-var queryHist = [];
-
-
 var searchBar = document.getElementById("search");
 var keywordCardContainer = document.getElementById("keyword-container");
-
 var createKeywordBtn = document.getElementById("create-keyword-btn");
+// Query History keeps
+var queryHist = [];
+// Add Btn Listener
 createKeywordBtn.addEventListener("click", () => {
     createKeyWordCard(keywordCardContainer, searchBar.value);
 });
@@ -96,7 +94,6 @@ function getGIF(query) {
             getGIF(this.innerHTML);
         });
         queryHist.push(searchQuery);
-        document.body.prepend(newSearchBtn);
     }
 
     axios.get("http://api.giphy.com/v1/gifs/search?api_key=WqveMC9zydrTtIyrQ6XHFg3KZG8x2SJg&q=" + searchQuery).then(function (res) {
@@ -117,15 +114,19 @@ function getGIF(query) {
             newGIFContainer.appendChild(newGIFImg);
             newGIFContainer.appendChild(gifDesc);
 
-
+            // Add the new GIF container and its children to the main content
             mainContentContainer.appendChild(newGIFContainer);
         });
 
     });
 }
 
+// Clears the passed in HTML container of all children. 
+// So if div X is passed in with 3 "p" children, it will remove
+// all of those p tags
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
+        // Iterate over each child and remove it
         parent.removeChild(parent.firstChild);
     }
 }
