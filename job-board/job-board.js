@@ -68,27 +68,26 @@ function isJobInputValid(desc, loc) {
     return true;
 }
 
+// Given expected values/parameters from the data received 
+// from github jobs api, this will create the visual
+// card elements and children to be appended
+// to the main container
 function createJobCard(containerParent, companyImgSrc, jobTitle, jobDesc, jobHowToApply) {
 
     let outsideContainer = document.createElement("div");
-    outsideContainer.className = "col-xs-1-12";
-    outsideContainer.className = "content-item";
+    outsideContainer.className = "col-xs-1-12 content-item";
+
     let cardContainer = document.createElement("div");
     cardContainer.className = "card";
     cardContainer.style.boxShadow = "8px 8px 3px grey";
 
-    outsideContainer.appendChild(cardContainer);
 
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
 
-    cardContainer.appendChild(cardBody);
 
     let jobCompanyImg = document.createElement("img");
     jobCompanyImg.src = companyImgSrc;
-
-    // jobCompanyImg.style.width = "15vw";
-    // jobCompanyImg.style.height = "15vh";
 
     let jobTitleH3 = document.createElement("h3");
     jobTitleH3.className = "card-title";
@@ -107,6 +106,9 @@ function createJobCard(containerParent, companyImgSrc, jobTitle, jobDesc, jobHow
         jobDescP.innerHTML = fullDesc;
     });
     jobApplicationLinkBtn.className = "btn btn-primary";
+
+    outsideContainer.appendChild(cardContainer);
+    cardContainer.appendChild(cardBody);
 
     cardBody.appendChild(jobCompanyImg);
     cardBody.appendChild(jobTitleH3);
