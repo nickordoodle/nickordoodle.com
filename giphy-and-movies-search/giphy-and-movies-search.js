@@ -54,7 +54,7 @@ function createKeyWordCard(containerParent, keyword) {
 
 function getMovies(query) {
     removeAllChildNodes(mainContentContainer);
-    axios.get("http://www.omdbapi.com/?apikey=dbf8339d&type=movie&s=" + query).then(function (res) {
+    axios.get("http://www.omdbapi.com/?apikey=YOUR_API_KEY_GOES_HERE&type=movie&s=" + query).then(function (res) {
         let responseArray = res.data.Search;
         for (let i = 0; i < 11; i++) {
             let newMovieContainer = document.createElement("div");
@@ -99,7 +99,7 @@ function getGIF(query) {
         document.body.prepend(newSearchBtn);
     }
 
-    axios.get("http://api.giphy.com/v1/gifs/search?api_key=WqveMC9zydrTtIyrQ6XHFg3KZG8x2SJg&q=" + searchQuery).then(function (res) {
+    axios.get("http://api.giphy.com/v1/gifs/search?api_key=YOUR_API_KEY_GOES_HERE&q=" + searchQuery).then(function (res) {
         let contentArr = res.data.data;
         contentArr.map(gif => {
             const url = gif.images.downsized.url;
