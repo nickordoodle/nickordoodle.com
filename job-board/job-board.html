@@ -16,30 +16,34 @@
 <body>
 
 
-    <div class="centered-content" id="search-container">
-        <div class="form-group">
+    <div id="search-container">
+        <div class="form-group search-item">
             <label for="">Description</label>
             <input type="text" class="form-control" name="" id="description-search" aria-describedby="helpId"
                 placeholder="Enter a job title or company">
 
+        </div>
+
+        <div class="form-group search-item">
             <label for="">Location</label>
             <input type="text" class="form-control" name="" id="location-search" aria-describedby="helpId"
                 placeholder="Enter your desired job location">
 
-            <a name="" id="find-jobs-btn" class="btn btn-primary" href="#" role="button">Find Jobs</a>
-
-            <div class="container" id="filters-container">
-
-                <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false"
-                    autocomplete="off" id="filter-full-time-btn">Full Time</button>
-                <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false"
-                    autocomplete="off" id="filter-part-time-btn">Part
-                    Time</button>
-            </div>
         </div>
 
 
+        <a name="" id="find-jobs-btn" class="btn btn-primary search-item" href="#" role="button">Find Jobs</a>
+
+        <div class="search-item" id="filters-container">
+
+            <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false"
+                autocomplete="off" id="filter-full-time-btn">Full Time</button>
+            <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false"
+                autocomplete="off" id="filter-part-time-btn">Part
+                Time</button>
+        </div>
     </div>
+
 
 
     <div class="container" id="main-container">
