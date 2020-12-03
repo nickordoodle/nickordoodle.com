@@ -1,31 +1,14 @@
 var mainContentContainer = document.getElementById("main-container");
 var descriptionTextInput = document.getElementById("description-search");
 var locationTextInput = document.getElementById("location-search");
+var filterFullTimeBtn;
+var filterPartTimeBtn;
+var findJobsBtn;
 var currentJobData = [];
 
-var filterFullTimeBtn = document.getElementById("filter-full-time-btn");
-filterFullTimeBtn.addEventListener("click", () => {
-    let updatedJobData = [...changeJobData("Full Time")];
-    refreshContent(updatedJobData);
-});
 
-var filterPartTimeBtn = document.getElementById("filter-part-time-btn");
-filterPartTimeBtn.addEventListener("click", () => {
-    let updatedJobData = [...changeJobData("Part Time")];
-    refreshContent(updatedJobData);
-});
+initAllButtons();
 
-
-var findJobsBtn = document.getElementById("find-jobs-btn");
-findJobsBtn.addEventListener("click", () => {
-    let descQuery = descriptionTextInput.value;
-    let locQuery = locationTextInput.value;
-    if (isJobInputValid(descQuery, locQuery)) {
-        showJobs(descQuery, locQuery);
-    } else {
-        alert("Please enter a value for description, location or both.")
-    }
-});
 
 function showJobs(desc, location) {
     let baseQuery = "https://jobs.github.com/positions.json?";
@@ -35,11 +18,11 @@ function showJobs(desc, location) {
     let axiosQuery = baseQuery + description + concatter + loc;
     axios.get(axiosQuery)
         .then(function (res) {
-            let jobs = res.data;
+            let jobsFromAxiosResponse = res.data;
             currentJobData = [];
             removeAllChildNodes(mainContentContainer);
-            jobs.map(job => {
-                createJobCard(mainContentContainer, job.company_logo, job.title, job.description, job.how_to_apply, job.url);
+            jobsFromAxiosResponse.map(job => {
+                createJobCard(mainContentContainer, job.company_logo, job.title, job.description, job.how_to_apply);
                 currentJobData.push(job);
             });
         })
@@ -57,19 +40,27 @@ function changeJobData(filterType) {
     return updatedJobDataContainer;
 }
 
+// Clears current content and inserts new content
+// The parameter newData is an expected list of jobs
+// that is not currently being shown.Creates a job card
+// for each job in the newData list
 function refreshContent(newData) {
     removeAllChildNodes(mainContentContainer);
     newData.map(job => {
-        createJobCard(mainContentContainer, job.company_logo, job.title, job.description, job.how_to_apply, job.url);
+        createJobCard(mainContentContainer, job.company_logo, job.title, job.description, job.how_to_apply);
     });
 }
 
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
+// Clears all children of the passed in HTML container/parent. 
+// So if div X is passed in with 3 "p" children, it will remove
+// all of those p tags
+function removeAllChildNodes(parentNode) {
+    parentNode.innerHTML = '';
 }
 
+// Validates user input
+// Checks that at least one of the parameters,
+// description or location has a value
 function isJobInputValid(desc, loc) {
     if (desc.length < 1 && loc.length < 1) {
         return false;
@@ -77,13 +68,14 @@ function isJobInputValid(desc, loc) {
     return true;
 }
 
-function createJobCard(containerParent, companyImgSrc, jobTitle, jobDesc, jobHowToApply, jobApplicationLink) {
+function createJobCard(containerParent, companyImgSrc, jobTitle, jobDesc, jobHowToApply) {
 
     let outsideContainer = document.createElement("div");
     outsideContainer.className = "col-xs-1-12";
     outsideContainer.className = "content-item";
     let cardContainer = document.createElement("div");
     cardContainer.className = "card";
+    cardContainer.style.boxShadow = "8px 8px 3px grey";
 
     outsideContainer.appendChild(cardContainer);
 
@@ -122,4 +114,29 @@ function createJobCard(containerParent, companyImgSrc, jobTitle, jobDesc, jobHow
     cardBody.appendChild(jobApplicationLinkBtn);
 
     containerParent.appendChild(outsideContainer);
+}
+
+function initAllButtons() {
+    filterFullTimeBtn = document.getElementById("filter-full-time-btn");
+    filterFullTimeBtn.addEventListener("click", () => {
+        let updatedJobData = [...changeJobData("Full Time")];
+        refreshContent(updatedJobData);
+    });
+
+    filterPartTimeBtn = document.getElementById("filter-part-time-btn");
+    filterPartTimeBtn.addEventListener("click", () => {
+        let updatedJobData = [...changeJobData("Part Time")];
+        refreshContent(updatedJobData);
+    });
+
+    findJobsBtn = document.getElementById("find-jobs-btn");
+    findJobsBtn.addEventListener("click", () => {
+        let descQuery = descriptionTextInput.value;
+        let locQuery = locationTextInput.value;
+        if (isJobInputValid(descQuery, locQuery)) {
+            showJobs(descQuery, locQuery);
+        } else {
+            alert("Please enter a value for description, location or both.")
+        }
+    });
 }
