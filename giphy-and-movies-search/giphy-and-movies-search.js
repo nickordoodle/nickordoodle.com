@@ -102,18 +102,14 @@ function getGIF(query) {
             const url = gif.images.downsized.url;
             const desc = gif.title;
 
+            // Create a container for the new content
             let newGIFContainer = document.createElement("div");
 
-            let newGIFImg = document.createElement("img");
-            newGIFImg.src = url;
-
-            let gifDesc = document.createElement("p");
-            gifDesc.innerHTML = desc;
+            // Create the img and description elements
+            createImgElementAndAppend(newGIFContainer, url);
+            createPElementAndAppend(newGIFContainer, desc);
 
             newGIFContainer.className = "content-item";
-            newGIFContainer.appendChild(newGIFImg);
-            newGIFContainer.appendChild(gifDesc);
-
             // Add the new GIF container and its children to the main content
             mainContentContainer.appendChild(newGIFContainer);
         });
@@ -121,12 +117,27 @@ function getGIF(query) {
     });
 }
 
-// Clears the passed in HTML container of all children. 
+// Clears all children of the passed in HTML container/parent. 
 // So if div X is passed in with 3 "p" children, it will remove
 // all of those p tags
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        // Iterate over each child and remove it
-        parent.removeChild(parent.firstChild);
-    }
+function removeAllChildNodes(parentNode) {
+    parentNode.innerHTML = '';
+}
+
+function createBtnElementAndReturn(text) {
+    let newBtn = document.createElement("button");
+    newBtn.innerHTML = text;
+    return newBtn;
+}
+
+function createImgElementAndAppend(parentContainer, imgURL) {
+    let newImg = document.createElement("img");
+    newImg.src = imgURL;
+    parentContainer.appendChild(newImg);
+}
+
+function createPElementAndAppend(parentContainer, text) {
+    let newParagraph = document.createElement("p");
+    newParagraph.innerHTML = text;
+    parentContainer.appendChild(newParagraph);
 }
