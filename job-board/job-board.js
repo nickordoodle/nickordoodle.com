@@ -86,8 +86,9 @@ function createJobCard(containerParent, companyImgSrc, jobTitle, jobDesc, jobHow
 
     let jobCompanyImg = document.createElement("img");
     jobCompanyImg.src = companyImgSrc;
-    jobCompanyImg.style.width = "15vw";
-    jobCompanyImg.style.height = "15vh";
+
+    // jobCompanyImg.style.width = "15vw";
+    // jobCompanyImg.style.height = "15vh";
 
     let jobTitleH3 = document.createElement("h3");
     jobTitleH3.className = "card-title";
