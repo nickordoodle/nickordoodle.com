@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Nick Scherer's Portfolio</title>
+    <title>Nick's Portfolio</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +20,9 @@
 
     <!-- Homepage CSS -->
     <link rel="stylesheet" href="home.css">
-
+    
+    <!-- Angular v1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
 <body>
@@ -39,31 +41,35 @@
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 spread-items-horizontal" id="nav-bar-items">
 
                     <li class="nav-item active nav-item-pop">
-                        <a href="#">Home <span class="sr-only">(current)</span></a>
+                        <a href="#"><span>Home</span> <span class="sr-only">(current)</span></a>
                     </li>
 
-                    <li class="nav-item nav-item-pop">
-                        <a href="#aboutme">About Me</a>
+                    <li class="nav-item nav-item-pop"></span>
+                        <a href="#aboutme"><span>About Me</span></a>
                     </li>
 
-                    <li class="nav-item nav-item-pop">
-                        <a href="#projects-link">Projects</a>
-                    </li>
+                    <!-- <li class="nav-item nav-item-pop"></span>
+                        <a href="photography.html"><span>Photos & Edits</span></a>
+                    </li> -->
 
                     <li class="nav-item nav-item-pop">
+                        <a href="#projects-link"><span>Projects</span></a>
+                    </li>
+
+                    <!-- <li class="nav-item nav-item-pop">
                         <a href="job-board/job-board.html">Github Job Search</a>
                     </li>
 
                     <li class="nav-item nav-item-pop">
                         <a href="vacation-form/index.html">Vacation Form</a>
+                    </li> -->
+
+                    <li class="nav-item nav-item-pop">
+                        <a href="#blog"><span>Blog</span></a>
                     </li>
 
                     <li class="nav-item nav-item-pop">
-                        <a href="#blog">Blog</a>
-                    </li>
-
-                    <li class="nav-item nav-item-pop">
-                        <a href="#contact">Contact</a>
+                        <a href="#contact"><span>Contact</span></a>
                     </li>
 
                 </ul>
@@ -100,17 +106,16 @@
 
         <!-- Home/Splash Page Section -->
         <section class="home-section centered-content code-font" id="splash-page">
-            <!-- Splash page section -->
 
             <!-- Container for introduction text content -->
             <div class="col-xs-1-12 centered-content color-theme-java-syntax" id="splash-text-container">
-                <h2>
-                    <code>Hello;</code><br><br>
+                <code>Hello;</code>
+                <p>
                     I am Nick.<br>
                     I am half human, half computer.<br>
                     I am a Software Engineer.<br>
                     based in Seattle, WA.
-                </h2>
+                </p>
             </div>
 
 
@@ -161,23 +166,28 @@
 
 
                 <div class="carousel-inner" id="projects-link">
-
-
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/icons/operating-system-icon-purple-undraw.png"
-                            alt="First slide">
-                    </div>
-
-
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="images/icons/project-icon-purple-undraw.png" alt="Second slide">
+                        <a href="https://github.com/nscherer30/Linkedin-Top-Post-Analyzer">
+                            <img class="d-block w-100"
+                                src="https://raw.githubusercontent.com/nscherer30/Linkedin-Top-Post-Analyzer/main/resources/linkedin-analyzer-usage-diagram.png"
+                                alt="Linkedin Top Post Analyzer">
+                        </a>
                     </div>
 
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/icons/road-to-knowledge-icon-purple-undraw.png"
-                            alt="Third slide">
+                        <a href="https://theofficeapparel.com/">
+                            <img class="d-block w-100"
+                                src="https://cdn.shopify.com/s/files/1/0504/8100/4724/products/24b053c6ec37e8470f826912f877b337_940x.jpg?v=1605846772"
+                                alt="theofficeapparel.com">
+                        </a>
                     </div>
 
+                    <div class="carousel-item">
+                        <a href="https://theofficeapparel.com/">
+                            <img class="d-block w-100" alt="photography" src="https://bn1305files.storage.live.com/y4mr0Rl53q1Xsz0yXjbgCw51mtdbdy-QjvnI4fNx6CXtrhhLXkRB6T1tNxiDC6AHODA7YiKa103T_wtWCo53O7VYQ2uZwEkAFGtP_RqHcd12RxPaGaXWXroOW26mM_9ECxS2lAo3BWG3k74IIo77_R5xIULVIQPky8tcOfJZ4CmnhtuqLOn2zSnMcJat4otgt1x?width=1024&height=1024&cropmode=none" 
+                            width="1024" height="1024" />
+                        </a>
+                    </div>
                 </div>
 
 
@@ -211,85 +221,15 @@
 
             <div class="container grid-text-layout">
                 <blockquote class="embedly-card" data-card-theme="dark">
-                    <h4><a
-                            href="https://levelup.gitconnected.com/6-programming-jokes-that-will-make-you-lol-131b8cae4dc5">6
-                            Programming Jokes That Will Make You LOL</a></h4>
-                    <p>We all like jokes that are cracked at the expense of someone else's code. Developers are usually
-                        very
-                        quiet and introverted. We take a bunch of 'tickets' and convert them into code while being
-                        seated at
-                        our desk all day. Strange, innit?</p>
+                    <h4>
+                        <a
+                            href="https://nickscherer.medium.com/from-military-soldier-to-software-engineer-at-amazon-during-a-global-pandemic-c9247cdd275a">From
+                            Infantry
+                            Officer to Software Engineer
+                        </a>
+                    </h4>
                 </blockquote>
-                <div class="grid-blog-post">
-                    <div>
-                        <h2>Leadership in Turbulent Times</h2>
-                        <p>Problems can vary from fighting for your life or fighting for your company.
-                            What
-                            happens in moments like these? Naturally, people will rise to the fight and others will look
-                            to
-                            follow.</p>
-                    </div>
-
-                </div>
-
-                <div class="grid-blog-post">
-                    <h2>From Army Infantry Officer to Software Engineer at Amazon during a Global
-                        Pandemic
-                    </h2>
-                    <p>Transitioning out of the military is not easy. But with enough due diligence,
-                        research and the unrelenting desire to succeed, you can find your next path.</p>
-                </div>
-
-                <div class="grid-blog-post">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam ex dolorum? Magni
-                        similique unde illo accusantium necessitatibus dolorum laborum, voluptatem quis. Quae amet
-                        tempore omnis perferendis cum mollitia dolores?
-                    </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere aliquid quo adipisci
-                        repudiandae aut aspernatur. Ea necessitatibus repellat quibusdam iure nam, ad doloremque,
-                        qui
-                        dolorum ipsa quae omnis itaque.</p>
-                </div>
-
-                <div class="grid-blog-post">
-                    <h2>Leadership in Turbulent Times</h2>
-                    <p>Problems can vary from fighting for your life or fighting for your company.
-                        What
-                        happens in moments like these? Naturally, people will rise to the fight and
-                        others will look to
-                        follow.</p>
-                </div>
-
-                <div class="grid-blog-post">
-                    <h2>Leadership in Turbulent Times</h2>
-                    <p>Problems can vary from fighting for your life or fighting for your company.
-                        What
-                        happens in moments like these? Naturally, people will rise to the fight and
-                        others will look to
-                        follow.</p>
-                </div>
-
-                <div>
-                    <h2>Leadership in Turbulent Times</h2>
-                    <p>Problems can vary from fighting for your life or fighting for your company.
-                        What
-                        happens in moments like these? Naturally, people will rise to the fight and
-                        others will look to
-                        follow.</p>
-                </div>
-
-                <div>
-                    <h2>Leadership in Turbulent Times</h2>
-                    <p>Problems can vary from fighting for your life or fighting for your company.
-                        What
-                        happens in moments like these? Naturally, people will rise to the fight and
-                        others will look to
-                        follow.</p>
-                </div>
             </div>
-
-
-
         </section>
 
 
@@ -309,17 +249,7 @@
                 <h4>DEVELOPMENT</h4>
             </div>
         </div>
-
-        <div class="row" id="photography">
-            <div class="one-half column" style="margin-top: 25%">
-                <h4>PHOTOGRAPHY</h4>
-            </div>
-        </div>
--->
-
-
-
-
+    -->
 
 
 
@@ -329,24 +259,23 @@
                 <code>Contact;</code>
             </h1>
 
-            <div class="container centered">
-
+            <form class="container centered half-parent-width">
                 <div class="form-group">
                     <label for="inputName1">Name</label>
-                    <input type="text" class="form-control" id="formName">
+                    <input type="text" class="form-control" id="formName" required>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail1">Email</label>
-                    <input type="email" class="form-control" id="formEmail" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="formEmail" aria-describedby="emailHelp" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
                 <div class="form-group">
                     <label for="inputMessage1">Message</label>
-                    <input type="text" class="form-control" id="formMessage">
+                    <input type="text" class="form-control" id="formMessage" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
-            </div>
+            </form>
 
 
             <!-- Social Media Links 
@@ -365,7 +294,6 @@
 
 
     </div>
-
 
 
 
