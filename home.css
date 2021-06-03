@@ -218,6 +218,8 @@ a {
 }
 
 #splash-page {
+    /* TODO: Change background image to carousel/slideshow type.
+    Consider overlaying city scrapes and see if they look cool */
     background-image: url('images/seattle\ skyline\ sketch\ edit.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -269,3 +271,17 @@ code {
     padding: 1em;   
     font-size: 1.2em;
 }
+
+/* TODO: Look into this design */
+/* .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch
+  }
+  .item {
+    flex: 1 0 auto;
+    margin: 5px;
+  } */
