@@ -215,21 +215,23 @@
         <section class="container home-section centered-content" id="blog">
 
 
-            <h1 class="display-3 center-horizontal code-font" id="blog-header">
+            <h1 class="display-3 center-horizontal" id="blog-header">
                 <code>Blog;</code>
             </h1>
 
-            <div class="container grid-text-layout">
-                <blockquote class="embedly-card" data-card-theme="dark">
-                    <h4>
-                        <a
-                            href="https://nickscherer.medium.com/from-military-soldier-to-software-engineer-at-amazon-during-a-global-pandemic-c9247cdd275a">From
-                            Infantry
-                            Officer to Software Engineer
-                        </a>
-                    </h4>
-                </blockquote>
-            </div>
+            <div id="medium-widget"></div>
+            <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+            <script>
+                MediumWidget.Init({
+                    renderTo: '#medium-widget',
+                    params: {   "resource":"https://medium.com/@nickscherer",
+                                "postsPerLine":2,
+                                "limit":4,
+                                "picture":"big",
+                                "fields":["description","author","publishAt"],
+                                "ratio":"square"}})
+            </script>
+
         </section>
 
 

@@ -162,7 +162,6 @@ hr {
 .blog-container {
     display: flex;
     flex-direction: column;
-
 }
 
 .grid-text-layout {
@@ -270,6 +269,24 @@ code {
     border-bottom: 2px solid;
     padding: 1em;   
     font-size: 1.2em;
+}
+
+/* Override imported medium CSS */
+.medium-widget-article__title {
+    color: #A7B5C4 !important;
+}
+
+.medium-widget-article__description {
+    /* Override imported medium CSS */
+    color: #A7B5C4 !important;
+}
+
+.medium-widget-article__author-name {
+    color: #A7B5C4 !important;
+}
+
+.medium-widget-article__info > div {
+    color: #A7B5C4 !important;
 }
 
 /* TODO: Look into this design */
